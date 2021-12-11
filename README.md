@@ -305,7 +305,149 @@ properties
     AOT(Ahead-of-Time) compilation: The application compiles during the build time.
 
 ## 3. what is SPA?
+    In the SPA, the whole page is not reloaded every time, only every time the view will be change.
+
+    So when you load the application for the first time, not all the pages from the server will be rendered... It's only index.html that loads when you load the application. 
+
+    Advantages of SPA:
+
+    -No page flicker. Native application feel.
+
+    -Client-side routing and data rendering on the client side.
+
+    -Data from server is in JSON format.
+
+
+## 4. Why prioritize TypeScript over JavaScript in Angular?
+    TypeScript is a superset of Javascript as it is Javascript + Types or extra features like typecasting for variables, annotations, variable scope and much more. The typescript is designed in a way to overcome Javascript shortcomings like typecasting of variables, classes, decorators, variable scope and many more. Moreover, Typescript is purely object-oriented programming that offers a "Compiler" that can convert to Javascript-equivalent code.
+
+## 5.Question: Describe the MVVM architecture?
+
+   ( Model- View - ViewModel )
+    The architecture allows the children to have reference through observables and not directly to their parents. 
+
+    Model: It represents the data and the business logic of an application, or we may say it contains the structure of an entity.
+
+    View: View is a visual layer of the application, and so consists of the UI Code(in Angular- HTML template of a component.). It sends the user action to the ViewModel but does not get the response back directly. It has to subscribe to the observables which ViewModel exposes to it to get the response. 
+
+    ViewModel: It is an abstract layer of the application and acts as a bridge between the View and Model(business logic).  View and ViewModel are connected with data-binding so, any change in the View the ViewModel takes note and changes the data inside the Model.
+## 6. What are Lifecycle hooks in Angular? Explain some life cycles hooks?
+    -ngOnChanges( ): This method is called whenever one or more input properties of the component changes. The hook receives a SimpleChanges object containing the previous and current values of the property.
+
+    -ngOnInit( ): This hook gets called once, after the ngOnChanges hook.
+
+    It initializes the component and sets the input properties of the component.
+
+    -ngDoCheck( ): It gets called after ngOnChanges and ngOnInit and is used to detect and act on changes that cannot be detected by Angular.
+
+    We can implement our change detection algorithm in this hook. 
+
+    -ngAfterContentInit( ): It gets called after the first ngDoCheck hook. This hook responds after the content gets projected inside the component.
+
+    -ngAfterContentChecked( ): It gets called after ngAfterContentInit and every subsequent ngDoCheck. It responds after the projected content is checked.
+
+    -ngAfterViewInit( ): It responds after a component's view, or a child component's view is initialized.
+
+    -ngAfterViewChecked( ): It gets called after ngAfterViewInit, and it responds after the component's view, or the child component's view is checked.
+
+    -ngOnDestroy( ): It gets called just before Angular destroys the component. This hook can be used to clean up the code and detach event handlers.
+
+## 7.Question: Explain Dependency Injection?
+    Dependency injection is an application design pattern that is implemented by Angular and forms the core concepts of Angular. 
+
+    Dependencies in Angular are services which have a functionality. Various components and directives in an application can need these functionalities of the service. Angular provides a smooth mechanism by which these dependencies are injected into components and directives.
+
+## 8. what is Observables?
+    observable is a stream that allows passing of more than one event. A callback is made for each event in an observable.
+
+## 9.Question: What is SPA (Single Page Application) in Angular? Contrast SPA technology with traditional web technology?
+
+    Answer: In the SPA technology, only a single page, which is index.HTML, is maintained although the URL keeps on changing. Unlike traditional web technology, SPA technology is faster and easy to develop as well.
+
+    In conventional web technology, as soon as a client requests a webpage, the server sends the resource. However, when again the client requests for another page, the server responds again with sending the requested resource. The problem with this technology is that it requires a lot of time.
+
+## 10. What is the process called by which TypeScript code is converted into JavaScript code?
+    Answer: It is called Transpiling. Even though TypeScript is used for writing code in Angular applications, it gets internally transpiled into equivalent JavaScript.
     
+## 11. What is ViewEncapsulation and how many ways are there do to do it in Angular?
+    ViewEncapsulation determines whether the styles defined in a particular component will affect the entire application or not. Angular supports 3 types of ViewEncapsulation:
+
+    Emulated – Styles used in other HTML spread to the component
+    Native – Styles used in other HTML doesn’t spread to the component
+    None – Styles defined in a component are visible to all components of the application
+
+## 12.  Why prioritize TypeScript over JavaScript in Angular?
+     TypeScript is a superset of Javascript as it is Javascript + Types or extra features like typecasting for variables, annotations, variable scope and much more. 
+     The typescript is designed in a way to overcome Javascript shortcomings like typecasting of variables, classes, decorators, variable scope and many more. Moreover, Typescript is purely object-oriented programming that offers a "Compiler" that can convert to Javascript-equivalent code. 
+
+## 13. Question: State some advantages of Angular over other frameworks.
+    
+    Out of box Features: Several built-in features like routing, state management, rxjs library, and HTTP services are straight out of the box services provided by Angular. So, one does not need to look for the above-stated features separately.
+
+    Declarative UI: Angular uses HTML to render the UI of an application as it is a declarative language and is much easier to use than JavaScript.
+
+    Long-term Google Support: Google plans to stick with Angular and further scale up its ecosystem as it has offered its long term support to Angular.
+
+## 14.what is ivy?
+
+    Ivy is the standard engine for rendering your content.
+
+    With Ivy, you can compile components more independently of each other. This improves development times since recompiling an application will only involve compiling the components that changed.
+
+## 15.what is angular universal?
+
+    There are three main reasons to create a Universal version of your application (Server-Side Rendering).
+    -Facilitate web crawlers through 
+    -search engine optimization (SEO)
+    -Improve performance on mobile and low-powered devices
+    -Show the first page quickly with a first-contentful paint (FCP)
+
+## 16. what is PWA or service worker?
+    the Angular service worker follows these guidelines:
+
+    -Caching an application is like installing a native application. The application is cached as one unit, and all files update together.
+    
+    -A running application continues to run with the same version of all files. It does not suddenly start 
+    receiving cached files from a newer version, which are likely incompatible.
+    
+    -When users refresh the application, they see the latest fully cached version. New tabs load the latest cached code.
+    
+    -Updates happen in the background, relatively quickly after changes are published. The previous version of the application is served until an update is installed and ready.
+    The service worker conserves bandwidth when possible. Resources are only downloaded if they've changed.
+
+
+## **RXJS**
+
+## 1.What is RxJS?
+    "Reactive Extensions for JavaScript", a library for reactive Streams which can be used to deal with asynchronous data streams and events.
+
+    RxJS uses JavaScript reactive programming. 
+
+## 2.Q: What is Stream?
+    "A stream refers to values of data overtime"
+
+
+## 3.What is Observable?
+    "Observable represents the idea of an invokable collection of future values or events."
+
+    In RxJS, you model asynchronous data streams using observable sequences Or just called observables, too.
+    An Observable is an object that over time and asynchronously emits multiple data values (data stream).
+
+
+## 4.What is the difference between an observable and a promise?
+    Promise:
+    A Promise emits a single event at the completion or failure of an async operation.
+    promise emits a single value
+    A promise is Not Lazy A Promise cannot be cancelled
+
+    Observable:
+    An observer is like a stream and allows you to pass at least zero or more events where the callback is needed for each event.
+    Observable is favored over Promise, it can emits multiple values over a time.
+    The "Observable" is cold. It's not called until we're registered to it.
+    You may cancel an Observable with the unsubscribe() method
+    Observable provides a lot of efficient operators like map, foreach, filter, reduce, retry, retryWhen etc.
+
+
 ## **DEVOPS QUESTIONS**
 
 ## 1. What is Devops?
