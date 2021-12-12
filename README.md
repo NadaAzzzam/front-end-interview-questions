@@ -290,6 +290,28 @@ properties
 
     -Inheritance in JavaScript works through something called prototypes and this form of inheritance is often called prototypal inheritance
 
+## 25. what is virtual dom?
+
+## 26. what is seo?
+
+## 26. what is premtives and none premtives?
+
+## 27. ts vs js function overloading?
+
+## 28. difference get vs post ?
+
+## 29. solid & solid in js frame works?
+
+## 30. set vs array in js?
+
+## 31. 
+import './files'
+import x from './files'
+import {x} './files'
+
+## 32. abstract class vs interface?
+
+
 ## **Angular Questions**
 
 ## 1. what is Directives?
