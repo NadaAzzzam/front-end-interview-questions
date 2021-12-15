@@ -16,12 +16,11 @@
 
     -A shallow copy means that certain (sub-)values are still connected to the original variable.
 
-|                     | splice,slice,concat  |  json(parse,stringify) | $.extend,_.extend,_.cloneDeep |
-| --                  | ---------------------| ---------------------- | ----------------------------- |
-| bool,num, strings   | deep                 |  deep                  |deep                           |
-| arrays,objects      | shallow              |  deep                  |deep                           |
-|(array of funcations)|shallow               |shallow                 |deep                           |
-
+|                       | splice,slice,concat | json(parse,stringify) | $.extend,_.extend,_.cloneDeep |
+| --------------------- | ------------------- | --------------------- | ----------------------------- |
+| bool,num, strings     | deep                | deep                  | deep                          |
+| arrays,objects        | shallow             | deep                  | deep                          |
+| (array of funcations) | shallow             | shallow               | deep                          |
 
     From these elements we can create three types of arrays.
 
@@ -291,25 +290,86 @@
 
 ## 25. what is virtual dom?
 
+    A virtual DOM is a lightweight JavaScript representation of the DOM used in declarative web frameworks such as React, Vue.js, and Elm.[1] Updating the virtual DOM is comparatively faster than updating the actual DOM (via js). Thus, the framework is free to make unnecessary changes to the virtual DOM relatively cheaply.
+
 ## 26. what is seo?
+
+    SEO stands for “search engine optimization.” In simple terms, it means the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing, and other search engines.
 
 ## 26. what is premtives and none premtives?
 
+    Primitives are the most basic kinds of data types and they directly contain values.
+
+    Non primitive data types are called reference types in Java and they refer to an object. They are created by the programmer and are not defined by Java like primitives are. A reference type references a memory location where the data is stored rather than directly containing a value.
+
 ## 27. ts vs js function overloading?
 
-## 28. difference get vs post ?
+    If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+
+    If we have to perform only one operation, having same name of the methods increases the readability of the program.
+
+## 28. Why Would You Use POST Instead of GET for a Read Operation??
+
+#### Security reasons
+
+    When a get GET request is received, many servers log information about the incoming request. Most of them will log the whole requested URL including query parameters, which might include sensitive
+    information.
+
+#### URL length
+
+    Browsers and HTTP servers can have a maximum URL length. For example Microsoft Internet Explorer is limited to 2,048 characters, and Apache HTTP Server can handle up to 4,000 characters in a URL. In our case, given that a telephone number might have a maximum length of 9 characters, there would be no reason to use POST instead of GET.
 
 ## 29. solid & solid in js frame works?
 
 ## 30. set vs array in js?
 
-## 31. 
-import './files'
-import x from './files'
-import {x} './files'
+    -Array:
+    -is type of structure representing block of data (numbers, objects, etc…) allocated in consecutive memory.
+    -elements in Array can be duplicate (unless you tell it not to be)
+    -Array is considered as “indexed collection” type of data
+
+
+    -Set:
+    -more familiar as a Math concept, is an abstract data type which contains only distinct elements/objects without the need of being allocated orderly by index.
+    -elements just can’t be duplicate (regardless what you decide).
+    -Set is considered as “keyed collection”.
+
+## 31.
+
+    import './files' >> lazy loading file
+    import x from './files'
+    import {x} './files'
 
 ## 32. abstract class vs interface?
 
+    ***************************Abstract class*****************************
+    1) Abstract class can have abstract and non-abstract methods.
+    2) Abstract class doesn't support multiple inheritance.
+    3) Abstract class can have final, non-final, static and non-static variables.
+    4) Abstract class can provide the implementation of interface.
+    5) The abstract keyword is used to declare abstract class.
+    6) An abstract class can extend another Java class and implement multiple Java interfaces.
+    7) An abstract class can be extended using keyword "extends".
+    8) A Java abstract class can have class members like private, protected, etc.
+    9)Example:
+    public abstract class Shape{
+    public abstract void draw();
+    }
+
+
+    *****************************Interface********************************
+    1) Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+    2) Interface supports multiple inheritance.
+    3) Interface has only static and final variable
+    4) Interface can't provide the implementation of abstract class.
+    5) The interface keyword is used to declare interface.
+    6) An interface can extend another Java interface only.
+    7) An interface can be implemented using keyword "implements".
+    8) Members of a Java interface are public by default.
+    9) Example:
+    public interface Drawable{
+    void draw();
+    }
 
 ## **Angular Questions**
 
@@ -544,7 +604,7 @@ The architecture allows the children to have reference through observables and n
 
 ## 7. What is difference between Continuous Deployment and Continuous Delivery?
 
-Continuous Deployment and Continuous Delivery are two different processes.
+    Continuous Deployment and Continuous Delivery are two different processes.
 
     Continuous Deployment - refers a system that allows deployment of every new changes that comes in source code from a developer.
     Continuous Delivery - refers the automation of entire software release process.
