@@ -608,3 +608,25 @@ The architecture allows the children to have reference through observables and n
 
     Continuous Deployment - refers a system that allows deployment of every new changes that comes in source code from a developer.
     Continuous Delivery - refers the automation of entire software release process.
+
+
+## **Unit Testing QUESTIONS**
+
+## 1. Benfits of Unit Testing?
+- guard against breaking changes 
+- Analyze code behavior (expected and unexpected)
+- Reveal design mistakes
+- it helps you to catch defects before releasing your software.
+- increase you productivity and go faster
+
+## 2. types of tests?
+- unit tests : test a component in isolation, without external resources (e.g. file system, database, API enpoints)
+    - Easiest to write.
+    - super fast
+    - Don't give us much confidence
+- integration tests: test a component with external resources (e.g file system, database, API endpoints )
+- end to end: test the entire application as a whole.
+    - More confidence
+    - very slow
+    - very fragile
+
