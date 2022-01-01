@@ -1,74 +1,41 @@
-## **JS QUESTIONS**
-## 1. what is javascript ?
-- js is a high-level ("we don't have to worry about complex styff like memory management")
-, object-oriented ("based on object, for storing most kinds of data")
-, multi-paradigm ("we can use different styles of programming")
- programming language ("instruct computer to do things")
+## **Problem Solving Topics**
+    1- String 
+    2- dynamic programming 
+    3- interval
+    4- linked list 
+    5- trees
+    6- Arrays
 
-## 2. JS Releases?
-- ES5, ES6/ES2015, ES7/ES2016, ES8/ES2017, ES9/ES2018, ES10/ES2019, ES11/ES2020
-- ES:ECMAScript, From ES6 they called it modern javascript and there is a new updates to JS every single year.
+## 1- What is a Valid palindrome?
+- instead of thinking of palindromes as a worda read the same backwards, think of them as words where each half mirrors each other!
 
-## 3. whta is a variable?
-- it is baseically a box into which we can store a value.
+- this mirror concept works for words with both even and add letters. 
+for Ex: (L O L ,  LO OL) that's mean that is left half is a mirror of right half 
 
-## 4. object and primitves?
-- so value is only primitves when it's not an object.
+**Valid palindrome psuedocode :** 
+Snatize input string by removing non alphanumeric chars and lower casing it. 
+create a left and right pointer, initaily at start and end string.
+while left less than right if chars at left and right pointer are not equal, return false else return true. 
 
-## 5. the 7 primitves data types?
-1. Number
-2. String
-3. Boolen
+    function isPalindrome(s) {
+    // Snatize the s param
+    // make it lowercase
+    // remove spaces , _ , non alphanumeric
+    s = s.toLowerCase().replace(/[\W_]/g,"")
 
-4. undefined:value taken of variable is not yet defind. ## let children
-5. Null: aslo mean emoty value and type of null is an object.
-6. symbol(ES5):value that is unique and cannot be changed [Not useful for now]
-7. bigInt(ES2020):larger intergers than the number type can hold
- 
-**JS has dynamic typing: we don't have to manually define the data type of the value stored in a variable. instead, data types are determind automatically**
+    // GET LEFT AND RIGHT NUMBER TO MATCH IF IT EQUEl EACH OTHER
 
-## 6. what's defenation of "typeof" ?
-- it is special operator to know type of variable.
+    left =0
+    right= s.length-1
 
-## 7. what's operator?
-- it allow us to transform values or combine multiple values, and there is many tpes of operator:
-#### -mathematical or arithmetic operation
-    let x= 100 +200
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            return false
+        }
+        left++
+        right--
+        
+    }
+    return true;
 
-#### -assignment operator
-    let x += 1
-    let x -= 1
-    let x--
-    let x++
-#### -comparison operator
-    let x = 100
-    let y = 500
-
-    x>y // false
-
-**math operator executed before comparison operators**
-
-## 8. what's type conversion and type coerion?
-- type conversion: when you manually convert from one type to anthor.
-
-    let x=10
-    String(x) + 1 // 101
-    Number(x) + 1 // 11
-- type coerion: when js automatically converts types behind the sciene.
-
-    '12'-'10' //2
-    '12'+'10' //1210
-
-## 9. How to check truthy and falsy ?
-    you can check it with Boolean().
-
-## 10. what's  difference between experission vs statements?
-- experission:  like a piece of code that produces a value. //3 + 4
-- statements: like a bigger piece of code that's executed and which doesn't produce a value on itself. "like full sentences that translate our actions" //if(true){const x ='10'}
-
-**Template literal expect experission not a statement**
-
-
-## 11. Brief History Of JavaScript with explanation.
-- **1995:** 
-
+    }
