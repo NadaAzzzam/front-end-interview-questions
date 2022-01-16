@@ -298,9 +298,13 @@
 
 ## 26. what is premtives and none premtives?
 
-    Primitives are the most basic kinds of data types and they directly contain values.
+- Primitives are the most basic kinds of data types and they directly contain values (numbers - string - boolean - undefind - null - symbol - bigint).
+- premtive types are stored in call stack (js engine)
 
-    Non primitive data types are called reference types in Java and they refer to an object. They are created by the programmer and are not defined by Java like primitives are. A reference type references a memory location where the data is stored rather than directly containing a value.
+- Non primitive data types are called reference types in Java and they refer to an object. They are created by the programmer and are not defined by Java like primitives are. A reference type references a memory location where the data is stored rather than directly containing a value. (object literals - arrays - funcations - many more)
+- reference types are stored in HEAP (js engine)
+
+
 
 ## 27. ts vs js function overloading?
 
@@ -331,8 +335,15 @@
 
     -Set:
     -more familiar as a Math concept, is an abstract data type which contains only distinct elements/objects without the need of being allocated orderly by index.
-    -elements just can’t be duplicate (regardless what you decide).
+    -elements just can’t be duplicate of arrays this is the main use case of set (regardless what you decide).
     -Set is considered as “keyed collection”.
+    -it's element are unique, order is irrelevent.
+    -no  need to geeting out values of set, all you need from set to check if it has certain value of no with (has())
+    - sets are also iterables
+        for(const order of orderSet) console.log(order)
+    -convertion from set to array : 
+    const staff = ['nada','ayman','nada']
+    const staffUniqueArray =[... new Set(staff)] to convert it to array
 
 ## 31.
 
