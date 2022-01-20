@@ -523,9 +523,9 @@ Often we want to enforce or apply behavior when receiving or sending HTTP reques
 
 In this post, we cover three different Interceptor implementations:
 
-Handling HTTP Headers
-HTTP Response Formatting
-HTTP Error Handling
+- Handling HTTP Headers
+- HTTP Response Formatting
+- HTTP Error Handling
 
 ## **RXJS**
 
