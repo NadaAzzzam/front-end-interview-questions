@@ -304,8 +304,6 @@
 - Non primitive data types are called reference types in Java and they refer to an object. They are created by the programmer and are not defined by Java like primitives are. A reference type references a memory location where the data is stored rather than directly containing a value. (object literals - arrays - funcations - many more)
 - reference types are stored in HEAP (js engine)
 
-
-
 ## 27. ts vs js function overloading?
 
     If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
@@ -341,7 +339,7 @@
     -no  need to geeting out values of set, all you need from set to check if it has certain value of no with (has())
     - sets are also iterables
         for(const order of orderSet) console.log(order)
-    -convertion from set to array : 
+    -convertion from set to array :
     const staff = ['nada','ayman','nada']
     const staffUniqueArray =[... new Set(staff)] to convert it to array
 
@@ -517,6 +515,18 @@ The architecture allows the children to have reference through observables and n
     -Updates happen in the background, relatively quickly after changes are published. The previous version of the application is served until an update is installed and ready.
     The service worker conserves bandwidth when possible. Resources are only downloaded if they've changed.
 
+## 17. what is Interceptors?
+
+- Angular provides many built-in tools to help scale out large JavaScript applications. Interceptors are one of the built-in tools for specifically handling HTTP requests at a global application level.
+
+Often we want to enforce or apply behavior when receiving or sending HTTP requests within our application. Interceptors are a unique type of Angular Service that we can implement. Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient. By intercepting the HTTP request, we can modify or change the value of the request.
+
+In this post, we cover three different Interceptor implementations:
+
+Handling HTTP Headers
+HTTP Response Formatting
+HTTP Error Handling
+
 ## **RXJS**
 
 ## 1.What is RxJS?
@@ -620,24 +630,24 @@ The architecture allows the children to have reference through observables and n
     Continuous Deployment - refers a system that allows deployment of every new changes that comes in source code from a developer.
     Continuous Delivery - refers the automation of entire software release process.
 
-
 ## **Unit Testing QUESTIONS**
 
 ## 1. Benfits of Unit Testing?
-- guard against breaking changes 
+
+- guard against breaking changes
 - Analyze code behavior (expected and unexpected)
 - Reveal design mistakes
 - it helps you to catch defects before releasing your software.
 - increase you productivity and go faster
 
 ## 2. types of tests?
+
 - unit tests : test a component in isolation, without external resources (e.g. file system, database, API enpoints)
-    - Easiest to write.
-    - super fast
-    - Don't give us much confidence
+  - Easiest to write.
+  - super fast
+  - Don't give us much confidence
 - integration tests: test a component with external resources (e.g file system, database, API endpoints )
 - end to end: test the entire application as a whole.
-    - More confidence
-    - very slow
-    - very fragile
-
+  - More confidence
+  - very slow
+  - very fragile
