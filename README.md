@@ -356,7 +356,8 @@
     const staff = ['nada','ayman','nada']
     const staffUniqueArray =[... new Set(staff)] to convert it to array
 
-## 31.
+## 31. different ways to  import files in js?
+- `https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import`
 
     import './files' >> lazy loading file
     import x from './files'
