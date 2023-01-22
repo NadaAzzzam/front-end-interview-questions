@@ -116,5 +116,67 @@ to avoide an accidental errors.
 - is kind of placeholder to receive input values only inside the function, and the argument is the actual values of the function parametares.
 
 ## 16. what's arrow function?
+
 - is third type of function that was added by ES6 and it's form of function expression that is shorter and faster to write.
 
+###########Data Structures, Modern Operators and Strings##################
+
+![](https://img-c.udemycdn.com/redactor/raw/2020-10-09_07-52-04-6f5b7bac5e38fbd40632dd1d346143a4.png)
+
+## 17. what's Array Destructuring ?
+
+- unpackeging values from array or an object into separate variables or to break a complex data structure down into a small data structure like a variable.
+
+For Arrays:
+
+```
+ const arr = [1,2,3];
+ const [x ,y,z]= arr;
+   //output : x=1 , y=2 , z=3
+```
+
+```
+ [x ,y,z] = [z,x,y]
+   //output : x=3 , y=1 , z=2
+```
+
+```
+ [x ,y,z] = [1,2]
+   //output : x=1 , y=2 , z= undefined
+```
+
+For Object:
+
+```
+ const order = {
+  info:{
+    name:'Nada',
+    age:12,
+  },
+  ids:[1,2,3,4,5]
+ };
+
+ const [info ,ids,z=[]]= order;
+
+   //output : info={
+    name:'Nada',
+    age:12,
+  } , ids=[1,2,3,4,5] , z=[ ]
+```
+Nested objects:
+```
+ const order = {
+  name:'nada',
+  info:{
+    name:'Nada',
+    age:12,
+  },
+  ids:[1,2,3,4,5]
+ };
+
+ const {info:{name,age}, ids} = order
+
+ //output : name:'Nada'; age= 12
+```
+## 18. Spreed operator (...)?
+- taking all elements out of the array.
